@@ -874,7 +874,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: 229F-10-malinee-gi204-ai-for-game
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -882,7 +882,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: 229F-10-malinee-gi204-ai-for-game
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: 229F-10-malinee-gi204-ai-for-game
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
