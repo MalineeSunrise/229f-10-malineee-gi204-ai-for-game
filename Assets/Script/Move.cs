@@ -3,8 +3,9 @@ using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
-    float speed = 3;
+    float speed = 1;
     private InputAction moveAction;
+    public AudioSource walkSound;
 
     private void Awake()
     {
@@ -20,7 +21,22 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var hInput = moveAction.ReadValue<Vector2>().y;
-        transform.Translate(hInput * speed  * Time.deltaTime * Vector2.left);
+        var hInput = moveAction.ReadValue<Vector2>().x;
+        transform.Translate(hInput * speed  * Time.deltaTime * Vector3.forward);
+
+        if (Mathf.Abs(hInput) > 0.1f)
+        {
+            if (!walkSound.isPlaying)
+            {
+                walkSound.Play();
+            }
+        }
+        else
+        {
+            if (walkSound.isPlaying)
+            {
+                walkSound.Stop();
+            }
+        }
     }
 }
